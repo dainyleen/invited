@@ -1,2 +1,2 @@
 # Invited
-Building an rsvp app for an upcoming youth event. It takes a few moments for anyone interested. You are INVITED!
+Building an rsvp app for an upcoming youth event. It only takes a couple of minutes to do it. You are INVITED!
