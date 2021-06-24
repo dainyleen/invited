@@ -1,6 +1,4 @@
-/* ================================= 
-  Element Styles
-==================================== */
+/* ELEMENT STYLE */
 
 * {
   box-sizing: border-box;
@@ -69,10 +67,9 @@ button {
 }
 header {
   text-align: center;
-  background: linear-gradient(90deg, #d4eece, #55b3d0, #1e7eb7),
-              url('../images/header-bg.jpg') no-repeat;
-              background-blend-mode: multiply;    
-              background-size: cover;   
+  background: linear-gradient(90deg, #d4eece, #55b3d0, #1e7eb7), url('../images/header-bg.jpg') no-repeat;
+  background-blend-mode: multiply;    
+  background-size: cover;   
 }
 header input {
   padding: 12px;
@@ -128,7 +125,8 @@ div > label {
   color: #767676;
 }
 
-/* responded */
+/* RESPONDED */
+
 .responded {
   transition: 0.4s;
   border-color: rgba(88, 183, 205, .9);
@@ -138,9 +136,7 @@ div > label {
   color: rgba(88, 183, 205, 1);
 }
 
-/* ================================= 
-  Media Queries
-==================================== */
+/* MEDIA QUERIES */
 
 @media (min-width: 0) and (max-width: 768px) {
   header {
