@@ -14,6 +14,11 @@ form.addEventListener('submit', (e) => {
   checkbox.type = 'checkbox'
   label.appendChild(checkbox)
   li.appendChild(label)
+
+  const button= document.createElement('button')
+  button.textContent = 'remove'
+  li.appendChild(button)
+
   ul.appendChild(li)
 })
 
@@ -26,5 +31,13 @@ ul.addEventListener('change', (e) => {
     listItem.className = 'responded'
   } else {
     listItem.className = ''
+  }
+})
+
+ul.addEventListener('click', (e) => {
+  if (e.target.tagName === 'BUTTON') {
+    const li = e.target.parentNode
+    const ul = li.parentNode
+    ul.removeChild(li)
   }
 })
