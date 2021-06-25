@@ -37,9 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   function createLI (text) {
+
+    function createElement(elementName, prop, value) {
+      const element = document.createElement(elementName)
+      element[prop] = value
+      return element
+    }
     const li = document.createElement('li')
-    const span = document.createElement('span')
-    span.textContent = text
+  
     li.appendChild(span)
 
     const label = document.createElement('label')
