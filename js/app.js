@@ -14,9 +14,13 @@ function createLI (text) {
   label.appendChild(checkbox)
   li.appendChild(label)
 
-  const button= document.createElement('button')
-  button.textContent = 'remove'
-  li.appendChild(button)
+  const editButton = document.createElement('button')
+  editButton.textContent = 'edit'
+  li.appendChild(editButton)
+
+  const removeButton= document.createElement('button')
+  removeButton.textContent = 'remove'
+  li.appendChild(removeButton)
 
   return li
 }
@@ -43,8 +47,13 @@ ul.addEventListener('change', (e) => {
 
 ul.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON') {
-    const li = e.target.parentNode
+    const button = e.target
+    const li = button.parentNode
     const ul = li.parentNode
-    ul.removeChild(li)
+    if (button.textContent === 'remove') {
+      ul.removeChild(li)
+    } else if (button.textContent === 'edit') {
+      console.log('edit')
+    }
   }
 })
