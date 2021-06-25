@@ -43,26 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
       element[prop] = value
       return element
     }
+
+    function appendToLI(elementName, prop, value) {
+      const element = createElement(elementName, prop, value)
+      li.appendChild(element)
+      return element
+    }
+
     const li = document.createElement('li')
-  
-    li.appendChild(span)
-
-    const label = document.createElement('label')
-    label.textContent = 'confirmed'
-
-    const checkbox = document.createElement('input')
-    checkbox.type = 'checkbox'
+    appendToLI('span', 'textContent', text)
+    const label = appendToLI('label', 'textContent', 'confirmed')
+    const checkbox = createElement('input', 'type', 'checkbox')
     label.appendChild(checkbox)
-    li.appendChild(label)
-
-    const editButton = document.createElement('button')
-    editButton.textContent = 'edit'
-    li.appendChild(editButton)
-
-    const removeButton= document.createElement('button')
-    removeButton.textContent = 'remove'
-    li.appendChild(removeButton)
-
+    appendToLI('button', 'textContent', 'edit')
+    appendToLI('button', 'textContent', 'remove')
     return li
   }
 
